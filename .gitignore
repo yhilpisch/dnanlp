@@ -9,6 +9,8 @@ data_harvey/tokens/
 data_musk/results/
 data_musk/tokens/
 *.avro
+help/
+*.ipynb~
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

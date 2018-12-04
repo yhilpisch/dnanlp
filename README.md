@@ -4,6 +4,8 @@ This repository provides Python codes and Jupyter Notebooks for the Dow Jones ap
 
 <img src="http://hilpisch.com/images/dna_paper_cover.png" width="500">
 
+## Applied Research Paper Download
+
 To **download** the PDF version of the paper visit http://go.dowjones.com/dna-research-paper.
 
 ## Setup and Installation
@@ -16,6 +18,10 @@ The following assumes that you have set up a cloud instance (e.g. on DigitalOcea
 
 Then on the shell of the Docker container or the cloud instance execute the following:
 
+    cd root
+    apt-get update
+    apt-get upgrade -y
+    apt-get install -y wget
     wget http://hilpisch.com/nlp/setup_dna_nlp.sh
     bash setup_dna_nlp.sh
 
