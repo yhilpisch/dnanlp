@@ -103,24 +103,27 @@ cd /root/notebook
 # CLONING THE REPO
 printf "Cloning the DNA NLP Git repository.\n"
 git clone --depth=1 http://github.com/yhilpisch/dnanlp
-cd dnanlp/modules
 
 printf "Downloading additional files.\n"
+cd /root/notebook/dnanlp/modules
 wget -q http://hilpisch.com/nlp/soiepy.zip
 unzip soiepy.zip
 rm soiepy.zip
-cd /home/root/notebook/dnanlp
+
+cd /home/root/notebook/
 wget -q http://hilpisch.com/nlp/custom.css
 wget -q http://hilpisch.com/nlp/create_swap.sh
 printf "Success.\n"
 
-mv custom.css /root/.jupyter/custom/custom.css
-
-mkdir logs
-touch logs/jupyter.log
+# CREATE A SWAP PARTITION
+/bin/bash /create_swap.sh
 
 # STARTING JUPYTER NOTEBOOK
+mv custom.css /root/.jupyter/custom/custom.css
+mkdir logs
+touch logs/jupyter.log
 nohup jupyter notebook --allow-root > logs/jupyter.log &
+
 printf "\n\n"
-printf "Your Jupyter Server is running. To access it, please visit\n\n"
+printf "Your Jupyter Server is running. To access it, please visit:\n\n"
 printf "$JUPYTER_URL\n\n"
