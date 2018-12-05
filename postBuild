@@ -1,0 +1,3 @@
+python -c "import nltk; nltk.download('stopwords'); nltk.download('punkt')"
+python -c "import nltk; nltk.download('vader_lexicon'); nltk.download('wordnet')"
+
