@@ -5,3 +5,11 @@ cd /home/jovyan/modules
 wget -q http://hilpisch.com/nlp/soiepy.zip
 unzip soiepy.zip
 rm soiepy.zip
+
+wget http://mirror.synyx.de/apache/avro/stable/py3/avro-python3-1.8.2.tar.gz
+tar xvf avro-python3-1.8.2.tar.gz
+cd avro-python3-1.8.2
+python setup.py install
+cd ..
+rm avro-python3-1.8.2.tar.gz
+rm -rf avro-python3-1.8.2
