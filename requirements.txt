@@ -1,0 +1,13 @@
+pytables
+pandas
+matplotlib
+scikit-learn
+nltk=3.2.5
+gensim
+networkx
+lxml
+
+Cython
+cufflinks
+wordcloud
+pyvis
