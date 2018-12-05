@@ -1,4 +1,4 @@
-pytables
+tables
 pandas
 matplotlib
 scikit-learn
@@ -7,7 +7,6 @@ gensim
 networkx
 lxml
 
-Cython
 cufflinks
 wordcloud
 pyvis
