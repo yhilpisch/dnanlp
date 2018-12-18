@@ -110,15 +110,17 @@ wget -q http://hilpisch.com/nlp/soiepy.zip
 unzip soiepy.zip
 rm soiepy.zip
 
-cd /home/root/notebook/
-wget -q http://hilpisch.com/nlp/custom.css
-wget -q http://hilpisch.com/nlp/create_swap.sh
+cd /root/notebook/
 printf "Success.\n"
 
 # CREATE A SWAP PARTITION
-/bin/bash /create_swap.sh
+# comment out these lines if not required
+wget -q http://hilpisch.com/nlp/create_swap.sh
+/bin/bash /root/notebook/create_swap.sh
+rm /root/notebook/create_swap.sh
 
 # STARTING JUPYTER NOTEBOOK
+wget -q http://hilpisch.com/nlp/custom.css
 mv custom.css /root/.jupyter/custom/custom.css
 mkdir logs
 touch logs/jupyter.log
